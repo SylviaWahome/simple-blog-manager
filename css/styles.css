@@ -1,0 +1,161 @@
+/* styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdf6f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background-color 0.3s ease-in-out;
+}
+
+header {
+  background-color: #ffc1cc;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-list {
+  border-right: 2px dashed #f4a5ae;
+  padding-right: 2rem;
+}
+
+.card-list div {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f4a5ae;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-list div:hover {
+  background-color: #ffe5ec;
+  transform: scale(1.02);
+}
+
+.card-list .selected {
+  background-color: #ffd1dc;
+  border-color: #ff6f91;
+  font-weight: bold;
+}
+
+.card-detail {
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #f4a5ae;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-detail h2 {
+  margin-top: 0;
+  color: #c0392b;
+}
+
+.buttons button {
+  background-color: #ff6f91;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #e94e77;
+}
+
+.form-section {
+  grid-column: span 2;
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+form {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #f4a5ae;
+  border-radius: 10px;
+  flex: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+form h3 {
+  margin-top: 0;
+  color: #c0392b;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #ff6f91;
+  outline: none;
+}
+
+button[type="submit"],
+#cancel-edit {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ff6f91;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+#cancel-edit:hover {
+  background-color: #e94e77;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: #ffc1cc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .form-section {
+    flex-direction: column;
+  }
+  .card-list {
+    border-right: none;
+    padding-right: 0;
+  }
+}
